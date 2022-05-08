@@ -1,3 +1,6 @@
+#ifndef CGERENCIADOROBJ_H_INCLUDED
+#define CGERENCIADOROBJ_H_INCLUDED
+
 #include "CObjeto.h"
 class CGerenciadorObjetos
 {
@@ -184,3 +187,5 @@ PoolNumeros CGerenciadorObjetos::numObjetos;
 int CGerenciadorObjetos::totalObjetos;
 Objeto CGerenciadorObjetos::objetos[MAX_OBJETOS];
 SDL_Renderer *CGerenciadorObjetos::renderer;
+
+#endif
