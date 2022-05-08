@@ -14,7 +14,6 @@ Principais definições utilizadas pela PIG
 #define MAX_FONTES 100
 #define PRIMEIRO_CAR 26
 #define ULTIMO_CAR 256
-#define NOME_ARQ_TEMP "fontess.bmp"
 
 #define MAX_SLOTS_AL 4000
 

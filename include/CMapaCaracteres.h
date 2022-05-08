@@ -10,6 +10,8 @@ private:
     SDL_Renderer *render;
     SDL_Texture **glyphsT;
 
+    char const *arquivo_temp = "fontess.bmp";
+
 public:
     char nome[100];
     int tamFonte;
@@ -70,7 +72,7 @@ public:
             rect.x += rect.w;
         }
         // off->EncerrarDesenho();
-        off->SalvarImagem(NOME_ARQ_TEMP);
+        off->SalvarImagem(arquivo_temp);
 
         rect.x = 0;
         rect.y = 0;
@@ -111,7 +113,7 @@ public:
 
         TTF_CloseFont(font);
         delete off;
-        remove(NOME_ARQ_TEMP);
+        remove(arquivo_temp);
     }
 
     CMapaCaracteres(char *nomeFonte, SDL_Renderer *renderer, int tamanhoFonte, int estilo, char *fundoFonte, int outline, PIG_Cor corOutline)
@@ -165,10 +167,10 @@ public:
         SDL_FillRect(off->GetSurface(), &rect, SDL_MapRGB(off->GetSurface()->format, 0, 0, 0));
 
         // off->EncerrarDesenho();
-        off->SalvarImagem(NOME_ARQ_TEMP);
+        off->SalvarImagem(arquivo_temp);
         off->PintarFundo(BRANCO);
 
-        SDL_Surface *stencil = IMG_Load(NOME_ARQ_TEMP);
+        SDL_Surface *stencil = IMG_Load(arquivo_temp);
         SDL_SetColorKey(stencil, SDL_TRUE, SDL_MapRGBA(stencil->format, 0, 0, 0, 255));
         SDL_Texture *textStencil = SDL_CreateTextureFromSurface(off->GetRenderer(), stencil);
 
@@ -185,7 +187,7 @@ public:
         }
         SDL_RenderCopy(off->GetRenderer(), textStencil, NULL, NULL);
         // off->EncerrarDesenho();
-        off->SalvarImagem(NOME_ARQ_TEMP);
+        off->SalvarImagem(arquivo_temp);
 
         rect.x = 0;
         rect.y = 0;
@@ -216,7 +218,7 @@ public:
         TTF_CloseFont(font);
         delete off;
 
-        remove(NOME_ARQ_TEMP);
+        remove(arquivo_temp);
     }
 
     ~CMapaCaracteres()

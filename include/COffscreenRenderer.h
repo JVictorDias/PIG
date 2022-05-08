@@ -93,7 +93,7 @@ public:
         SDL_RenderDrawRect(render, &r);
     }
 
-    void SalvarImagem(char *nomearq)
+    void SalvarImagem(char const *nomearq)
     {
         SDL_RenderReadPixels(render, NULL, SDL_PIXELFORMAT_ARGB8888, surface->pixels, surface->pitch);
         SDL_SaveBMP(surface, nomearq);
