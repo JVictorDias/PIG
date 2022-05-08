@@ -61,7 +61,7 @@ public:
         fontes[0] = new CMapaCaracteres("fontes//arial.ttf", renderer, 36, ESTILO_NORMAL, BRANCO, 0, BRANCO);
         fontesUsadas = 1;
 
-        corFundo = PRETO;
+        corFundo = BRANCO;
     }
 
     ~CJogo()
