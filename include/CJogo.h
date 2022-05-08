@@ -216,8 +216,6 @@ public:
     {
         if (0)
         {
-            register int i;
-            register int j;
             SDL_Surface *saveSurface = NULL;
             SDL_Surface *infoSurface = NULL;
             infoSurface = SDL_GetWindowSurface(window);
@@ -230,9 +228,9 @@ public:
                 {
                     if (SDL_RenderReadPixels(renderer, &infoSurface->clip_rect, infoSurface->format->format, pixels, infoSurface->w * infoSurface->format->BytesPerPixel) == 0)
                     {
-                        for (i = 0; i < infoSurface->h; i++)
+                        for (int i = 0; i < infoSurface->h; i++)
                         {
-                            for (j = 0; j < infoSurface->w; j++)
+                            for (int j = 0; j < infoSurface->w; j++)
                             {
                                 int offset = (i * infoSurface->w + j) * 4;
                                 for (int k = 0; k < 4; k++)
@@ -369,7 +367,7 @@ public:
 
     inline int GetLarguraPixels(char *str, int numFonte = 0)
     {
-        fontes[numFonte]->GetLarguraPixelsString(str);
+        return fontes[numFonte]->GetLarguraPixelsString(str);
     }
 
     inline void EscreverCentralizada(char const *str, int x, int y, int numFonte = 0)
