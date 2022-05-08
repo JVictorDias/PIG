@@ -15,7 +15,7 @@ ESTILO_CORTADO, para uma linha horizontal à meia-altura. Caso nenhum estilo seja
 retono:
 inteiro que representa a ideintificação única da fonte. Futuras referência a esta fonte devem idenitificá-las pelo número.
 ********************************/
-int PIG_criarFonte(char *nome, int tamanho, PIG_Cor corLetra, int contorno, PIG_Cor corContorno, PIG_Estilo estilo = ESTILO_NORMAL)
+int PIG_criarFonte(char const *nome, int tamanho, PIG_Cor corLetra, int contorno, PIG_Cor corContorno, PIG_Estilo estilo = ESTILO_NORMAL)
 {
     return jogo->CriaFonteNormal(nome, tamanho, estilo, corLetra, contorno, corContorno);
 }

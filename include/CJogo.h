@@ -359,7 +359,7 @@ public:
         return aux;
     }
 
-    int CriaFonteNormal(char *nome, int tamanho, int estilo, PIG_Cor corLetra, int contorno, PIG_Cor corContorno)
+    int CriaFonteNormal(char const *nome, int tamanho, int estilo, PIG_Cor corLetra, int contorno, PIG_Cor corContorno)
     {
         int aux = fontesUsadas;
         fontes[fontesUsadas] = new CMapaCaracteres(nome, renderer, tamanho, estilo, corLetra, contorno, corContorno);
