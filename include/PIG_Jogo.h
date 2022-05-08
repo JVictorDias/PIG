@@ -109,7 +109,7 @@ int PIG_pegarBotao()
 /********************************
 A função atualizarJanela() é reponsável por detectar todos os eventos e atualizar as variaveis internas da biblioteca.
 ********************************/
-int PIG_atualizarJanela()
+void PIG_atualizarJanela()
 {
     PIG_evento = PIG_pegarEvento();
     PIG_botao = PIG_pegarBotao();
