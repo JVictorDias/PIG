@@ -12,8 +12,6 @@ void PIG_criarJanela(char const *nome_Janela, int largura, int altura)
 {
     if (jogo == NULL)
     {
-        LARG_TELA = largura;
-        ALT_TELA = altura;
         jogo = new CJogo(nome_Janela, 0);
         CAssetLoader::Inicia();
         CGerenciadorTimers::Inicia();

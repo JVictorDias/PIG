@@ -7,7 +7,8 @@ versão da PIG compatível: 0.5.1
 Principais definições utilizadas pela PIG
 ********************************/
 
-int LARG_TELA, ALT_TELA;
+#define ALT_TELA 768
+#define LARG_TELA 1366
 
 #define MAX_CURSORES 10
 #define MAX_FONTES 100
