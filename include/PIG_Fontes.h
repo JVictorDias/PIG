@@ -54,7 +54,7 @@ posicaoX (entrada, passagem por valor): Valor da coordenada X da tela onde o usu
 posicaoY (entrada, passagem por valor): Valor da coordenada Y da tela onde o usuário deseja começar a escrever a string.
 numFonte (entrada, passagem por valor): número da fonte a ser utilizada. Caso o usuário não deseje uma fonte especial, será utilizada a fonte padrão (numeroFonte=0, tipo=Arial, tamanho=36, cor = Branco).
 ********************************/
-void PIG_escreverEsquerda(char *str, int posicaoX, int posicaoY, int numFonte = 0)
+void PIG_escreverEsquerda(char const *str, int posicaoX, int posicaoY, int numFonte = 0)
 {
     jogo->EscreverEsquerda(str, posicaoX, posicaoY, numFonte);
 }
@@ -67,7 +67,7 @@ posicaoX (entrada, passagem por valor): Valor da coordenada X da tela onde o usu
 posicaoY (entrada, passagem por valor): Valor da coordenada Y da tela onde o usuário deseja começar a escrever a string.
 numFonte (entrada, passagem por valor): número da fonte a ser utilizada. Caso o usuário não deseje uma fonte especial, será utilizada a fonte padrão (numeroFonte=0, tipo=Arial, tamanho=36, cor = Branco).
 ********************************/
-void PIG_escreverCentralizada(char *str, double X, double Y, int numFonte)
+void PIG_escreverCentralizada(char const *str, double X, double Y, int numFonte)
 {
     jogo->EscreverCentralizada(str, X, Y, numFonte);
 }

@@ -20,7 +20,7 @@ public:
     OffscreenRenderer offRenderer;
     int cursorPadrao;
 
-    CJogo(char *nome, int cursor = 0)
+    CJogo(char const *nome, int cursor = 0)
     {
         rodando = true;
         teclado = SDL_GetKeyboardState(NULL);
@@ -372,7 +372,7 @@ public:
         fontes[numFonte]->GetLarguraPixelsString(str);
     }
 
-    inline void EscreverCentralizada(char *str, int x, int y, int numFonte = 0)
+    inline void EscreverCentralizada(char const *str, int x, int y, int numFonte = 0)
     {
         fontes[numFonte]->EscreveStringCentralizado(str, x, y);
     }
@@ -382,7 +382,7 @@ public:
         fontes[numFonte]->EscreveStringDireita(str, x, y);
     }
 
-    inline void EscreverEsquerda(char *str, int x, int y, int numFonte = 0)
+    inline void EscreverEsquerda(char const *str, int x, int y, int numFonte = 0)
     {
         fontes[numFonte]->EscreveStringEsquerda(str, x, y);
     }

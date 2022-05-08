@@ -8,7 +8,7 @@ nome_Janela (entrada, passagem por referência*): indica o nome que a janela do j
 É utilizado o operador * apenas por se tratar de um parâmetro string. O valor do parâmetro não é alterado dentro da função.
 cursor_Proprio (entrada, passagem por valor): indica se o jogo utilizará cursores (ponteiros) próprios para o mouse ou utilizará o cursor padrão.
 ********************************/
-void PIG_criarJanela(char *nome_Janela, int largura, int altura)
+void PIG_criarJanela(char const *nome_Janela, int largura, int altura)
 {
     if (jogo == NULL)
     {

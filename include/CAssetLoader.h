@@ -13,7 +13,7 @@ private:
     static PoolNumeros numBitmaps;
     static HashNode *slots[MAX_SLOTS_AL];
 
-    static int BuscaNome(char *str)
+    static int BuscaNome(char const *str)
     {
         for (int i = 0; i < MAX_SLOTS_AL; i++)
         {
@@ -48,7 +48,7 @@ public:
         delete numBitmaps;
     }
 
-    static SDL_Surface *LoadImage(char *nomeArq)
+    static SDL_Surface *LoadImage(char const *nomeArq)
     {
         int indice = BuscaNome(nomeArq);
         if (indice == MAX_SLOTS_AL)
