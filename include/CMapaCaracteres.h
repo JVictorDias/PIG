@@ -85,6 +85,11 @@ public:
             dest.h = alturaLetra[j - PRIMEIRO_CAR];
             rect.w = dest.w = larguraLetra[j - PRIMEIRO_CAR];
             surfaceTemp[j - PRIMEIRO_CAR] = SDL_CreateRGBSurface(0, larguraLetra[j - PRIMEIRO_CAR], alturaLetra[j - PRIMEIRO_CAR], 24, 0, 0, 0, 0);
+            if (!surfaceTemp[j - PRIMEIRO_CAR])
+            {
+                printf("Surface nao encontrada %d\n", j - PRIMEIRO_CAR);
+                continue;
+            }
             SDL_BlitSurface(off->GetSurface(), &rect, surfaceTemp[j - PRIMEIRO_CAR], &dest);
             if (outline > 0)
             {
