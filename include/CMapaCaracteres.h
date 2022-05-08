@@ -36,6 +36,11 @@ public:
         for (Uint16 j = PRIMEIRO_CAR; j < ULTIMO_CAR; j++)
         {
             surfaceTemp[j - PRIMEIRO_CAR] = TTF_RenderGlyph_Solid(font, (Uint16)j, corFonte);
+            if (!surfaceTemp[j - PRIMEIRO_CAR])
+            {
+                printf("Character nao encontrado %d\n", j - PRIMEIRO_CAR);
+                continue;
+            }
             alturaLetra[j - PRIMEIRO_CAR] = surfaceTemp[j - PRIMEIRO_CAR]->h;
             if (surfaceTemp[j - PRIMEIRO_CAR]->h > altRend)
                 altRend = surfaceTemp[j - PRIMEIRO_CAR]->h;
