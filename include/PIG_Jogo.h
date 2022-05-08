@@ -10,7 +10,7 @@ cursor_Proprio (entrada, passagem por valor): indica se o jogo utilizará cursore
 ********************************/
 void PIG_criarJanela(char *nome_Janela, int largura, int altura)
 {
-    if(jogo == NULL)
+    if (jogo == NULL)
     {
         LARG_TELA = largura;
         ALT_TELA = altura;
@@ -67,13 +67,13 @@ Se o valor retornado for negativo isso significa que a tecla foi "soltada"
 ********************************/
 int PIG_pegarTecla()
 {
-    if(PIG_evento.tipoEvento == EVENTO_TECLADO)
+    if (PIG_evento.tipoEvento == EVENTO_TECLADO)
     {
-        if(PIG_evento.teclado.acao == TECLA_PRESSIONADA)
+        if (PIG_evento.teclado.acao == TECLA_PRESSIONADA)
         {
             return PIG_evento.teclado.tecla;
         }
-        if(PIG_evento.teclado.acao == TECLA_LIBERADA)
+        if (PIG_evento.teclado.acao == TECLA_LIBERADA)
         {
             return -PIG_evento.teclado.tecla;
         }
@@ -94,13 +94,13 @@ Se o valor retornado for negativo isso significa que a tecla foi "soltada"
 ********************************/
 int PIG_pegarBotao()
 {
-    if(PIG_evento.tipoEvento == EVENTO_MOUSE)
+    if (PIG_evento.tipoEvento == EVENTO_MOUSE)
     {
-        if(PIG_evento.mouse.acao == MOUSE_PRESSIONADO)
+        if (PIG_evento.mouse.acao == MOUSE_PRESSIONADO)
         {
             return PIG_evento.mouse.botao;
         }
-        if(PIG_evento.mouse.acao == MOUSE_LIBERADO)
+        if (PIG_evento.mouse.acao == MOUSE_LIBERADO)
         {
             return -(PIG_evento.mouse.botao);
         }
@@ -113,9 +113,9 @@ A função atualizarJanela() é reponsável por detectar todos os eventos e atualiza
 ********************************/
 int PIG_atualizarJanela()
 {
-    PIG_evento  = PIG_pegarEvento();
-    PIG_botao   = PIG_pegarBotao();
-    PIG_tecla   = PIG_pegarTecla();
+    PIG_evento = PIG_pegarEvento();
+    PIG_botao = PIG_pegarBotao();
+    PIG_tecla = PIG_pegarTecla();
 }
 
 /********************************

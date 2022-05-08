@@ -15,9 +15,9 @@ ESTILO_CORTADO, para uma linha horizontal à meia-altura. Caso nenhum estilo seja
 retono:
 inteiro que representa a ideintificação única da fonte. Futuras referência a esta fonte devem idenitificá-las pelo número.
 ********************************/
-int PIG_criarFonte(char *nome, int tamanho, PIG_Cor corLetra, int contorno, PIG_Cor corContorno, PIG_Estilo estilo=ESTILO_NORMAL)
+int PIG_criarFonte(char *nome, int tamanho, PIG_Cor corLetra, int contorno, PIG_Cor corContorno, PIG_Estilo estilo = ESTILO_NORMAL)
 {
-    return jogo->CriaFonteNormal(nome,tamanho,estilo,corLetra,contorno,corContorno);
+    return jogo->CriaFonteNormal(nome, tamanho, estilo, corLetra, contorno, corContorno);
 }
 
 /********************************
@@ -28,7 +28,7 @@ numFonte (entrada, passagem por valor): número da fonte a ser utilizada. Caso o 
 retorno:
 inteiro que representa o total de pixels (no eixo x) necessários para escrever a string.
 ********************************/
-int PIG_calcularLarguraPixels(char *str, int numFonte=0)
+int PIG_calcularLarguraPixels(char *str, int numFonte = 0)
 {
     return jogo->GetLarguraPixels(str);
 }
@@ -41,9 +41,9 @@ posicaoX (entrada, passagem por valor): Valor da coordenada X da tela onde o usu
 posicaoY (entrada, passagem por valor): Valor da coordenada Y da tela onde o usuário deseja começar a escrever a string.
 numFonte (entrada, passagem por valor): número da fonte a ser utilizada. Caso o usuário não deseje uma fonte especial, será utilizada a fonte padrão (numeroFonte=0, tipo=Arial, tamanho=36, cor = Branco).
 ********************************/
-void PIG_escreverDireita(char *str,int posicaoX,int posicaoY,int numFonte=0)
+void PIG_escreverDireita(char *str, int posicaoX, int posicaoY, int numFonte = 0)
 {
-    jogo->EscreverDireita(str,posicaoX,posicaoY,numFonte);
+    jogo->EscreverDireita(str, posicaoX, posicaoY, numFonte);
 }
 
 /********************************
@@ -54,9 +54,9 @@ posicaoX (entrada, passagem por valor): Valor da coordenada X da tela onde o usu
 posicaoY (entrada, passagem por valor): Valor da coordenada Y da tela onde o usuário deseja começar a escrever a string.
 numFonte (entrada, passagem por valor): número da fonte a ser utilizada. Caso o usuário não deseje uma fonte especial, será utilizada a fonte padrão (numeroFonte=0, tipo=Arial, tamanho=36, cor = Branco).
 ********************************/
-void PIG_escreverEsquerda(char *str,int posicaoX,int posicaoY,int numFonte=0)
+void PIG_escreverEsquerda(char *str, int posicaoX, int posicaoY, int numFonte = 0)
 {
-    jogo->EscreverEsquerda(str,posicaoX,posicaoY,numFonte);
+    jogo->EscreverEsquerda(str, posicaoX, posicaoY, numFonte);
 }
 
 /********************************
@@ -69,5 +69,5 @@ numFonte (entrada, passagem por valor): número da fonte a ser utilizada. Caso o 
 ********************************/
 void PIG_escreverCentralizada(char *str, double X, double Y, int numFonte)
 {
-    jogo->EscreverCentralizada(str,X,Y,numFonte);
+    jogo->EscreverCentralizada(str, X, Y, numFonte);
 }

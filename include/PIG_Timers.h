@@ -27,7 +27,6 @@ número real indicando o tempo (em segundos) desde a criação do timer.
 double PIG_tempoDecorrido(int id_timer)
 {
     return CGerenciadorTimers::GetTempoDecorrido(id_timer);
-
 }
 
 /********************************
@@ -38,7 +37,7 @@ id_timer (entrada, passagem por valor): identificador do timer.
 ********************************/
 void PIG_pausarTimer(int id_timer)
 {
-   CGerenciadorTimers::PausaTimer(id_timer);
+    CGerenciadorTimers::PausaTimer(id_timer);
 }
 
 /********************************
@@ -72,4 +71,3 @@ void PIG_destruirTimer(int id_timer)
 {
     CGerenciadorTimers::DestroiTimer(id_timer);
 }
-

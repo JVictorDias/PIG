@@ -1,22 +1,24 @@
-class CPilhaCoordenada{
+class CPilhaCoordenada
+{
 
 private:
+    typedef struct Ponto
+    {
+        int x, y;
+        struct Ponto *prox;
+    } Ponto;
 
-typedef struct Ponto{
-    int x,y;
-    struct Ponto *prox;
-} Ponto;
-
-Ponto *ini;
+    Ponto *ini;
 
 public:
-
-    CPilhaCoordenada(){
+    CPilhaCoordenada()
+    {
         ini = NULL;
     }
 
-    void Empilha(int x,int y){
-        Ponto *novo = (Ponto*)malloc(sizeof(Ponto));
+    void Empilha(int x, int y)
+    {
+        Ponto *novo = (Ponto *)malloc(sizeof(Ponto));
         novo->x = x;
         novo->y = y;
         novo->prox = ini;
@@ -24,8 +26,10 @@ public:
         ini = novo;
     }
 
-    int Desempilha(int &x,int &y){
-        if (ini==NULL) return 0;
+    int Desempilha(int &x, int &y)
+    {
+        if (ini == NULL)
+            return 0;
         Ponto *antigo = ini;
         ini = ini->prox;
         x = antigo->x;
@@ -34,12 +38,13 @@ public:
         return 1;
     }
 
-    ~CPilhaCoordenada(){
+    ~CPilhaCoordenada()
+    {
         Ponto *aux = ini;
-        while (ini){
+        while (ini)
+        {
             ini = ini->prox;
             free(aux);
         }
     }
-
 };
