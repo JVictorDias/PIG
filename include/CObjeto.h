@@ -258,7 +258,7 @@ public:
         dest.w = Largura;
 
         SDL_SetTextureAlphaMod(text, cor.a);
-        SDL_SetTextureColorMod(text, cor.r, cor.g, cor.b);
+        // SDL_SetTextureColorMod(text, cor.r, cor.g, cor.b);
 
         SDL_RenderCopyEx(renderer, text, NULL, &dest, -Angulo, NULL, SDL_FLIP_NONE);
     }
