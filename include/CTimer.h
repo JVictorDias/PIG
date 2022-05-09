@@ -1,43 +1,53 @@
-class CTimer{
+class CTimer
+{
 
 private:
-        long int inicio;
-        long int pausa;
-        bool pausado;
+    long int inicio;
+    long int pausa;
+    bool pausado;
+
 public:
-    CTimer(){
+    CTimer()
+    {
         inicio = clock();
         pausado = false;
     }
-    ~CTimer(){
+    ~CTimer()
+    {
     }
     double GetTempoDecorrido()
     {
-        if(pausado)
-            return (pausa-inicio)/(double)CLOCKS_PER_SEC;
+        if (pausado)
+            return (pausa - inicio) / (double)CLOCKS_PER_SEC;
         else
-            return (clock()-inicio)/(double)CLOCKS_PER_SEC;
+            return (clock() - inicio) / (double)CLOCKS_PER_SEC;
     }
 
-    void Pausa(){
-        if (!pausado){
+    void Pausa()
+    {
+        if (!pausado)
+        {
             pausado = true;
             pausa = clock();
         }
     }
-    void Despausa(){
-        if (pausado){
+    void Despausa()
+    {
+        if (pausado)
+        {
             long int decorrido = pausa - inicio;
             inicio = clock() - decorrido;
             pausado = false;
         }
     }
-    void Reinicia(){
+    void Reinicia()
+    {
         pausado = false;
         inicio = clock();
     }
-    CTimer* Copia(){
-        CTimer* outro = new CTimer();
+    CTimer *Copia()
+    {
+        CTimer *outro = new CTimer();
         outro->inicio = inicio;
         outro->pausa = pausa;
         outro->pausado = pausado;
@@ -45,4 +55,4 @@ public:
     }
 };
 
-typedef CTimer* Timer;
+typedef CTimer *Timer;
